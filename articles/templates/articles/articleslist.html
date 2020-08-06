@@ -1,5 +1,4 @@
 {% load static %}
-
 !DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,12 +7,14 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
   </head>
   <body>
-    <h1>ARTICLES</h1>
-    <p>These are my articles</p>
-    {% for i in articles %}
-    <h2><a href="#">{{i.title}}</a></h2>
-    <p>{{i.snippet}}</p>
-    <p>{{i.date}}</p>
-    {% endfor %}
+    <div class="container">
+      <h1>ARTICLES</h1>
+      <p>These are my articles</p>
+      {% for i in articles %}
+      <h2><a href="#">{{i.title}}</a></h2>
+      <p>{{i.snippet}}</p>
+      <p>{{i.date}}</p>
+      {% endfor %}
+    </div>
   </body>
 </html>
