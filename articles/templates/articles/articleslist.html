@@ -5,13 +5,15 @@ ARTICLES
 {%endblock%}
 
 {%block content%}
-    <div class="container">
-      <h1>ARTICLES</h1>
-      <p>These are my articles</p>
-      {% for i in articles %}
+<h1>ARTICLES</h1>
+<div class="articles">
+  {% for i in articles %}
+  <div class="article">
       <h2><a href="{% url 'articles:details' slug=i.slug %}">{{i.title}}</a></h2>
       <p>{{i.snippet}}</p>
       <p>{{i.date}}</p>
-      {% endfor %}
-    </div>
+      <p class="author">Added by : {{i.author.username}} </p>
+  </div>
+  {% endfor %}
+</div>
 {%endblock%}
